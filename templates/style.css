@@ -1,0 +1,30 @@
+:root {
+    --clr-green:#038C4C;
+    --clr-grey:#C4C4C4;
+    --clr-black:#000000;
+    --radius: 0.5rem;
+    --padding: 1rem;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+      font-family:'VT323', serif;
+      color:var(--clr-black);
+  }
+  
+  .wrapper{
+      width: 20rem;
+      padding: 2rem;
+      border-radius:var(--radius);
+      margin: 2rem auto;
+  }
+
+
+
