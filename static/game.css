@@ -69,6 +69,9 @@ body {
   line-height: 96px;
   color: #000000;
 }
+.forrest {
+  display: none;
+}
 .acorn {
   position: relative;
   margin-top: -1000;
@@ -305,10 +308,11 @@ body {
 }
 
 .wallet {
-  margin-top: 50px;
+  margin-top: 100px;
   left: 839px;
   top: 396px;
   padding-left: 50px;
+  margin-left: 300px;
 }
 .coinButton {
   border: none;
