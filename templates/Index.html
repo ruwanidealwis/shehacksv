@@ -3,21 +3,24 @@
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
   <link rel="stylesheet" href="/static/style.css">
+  <script type="text/javascript" src="../static/js/index.js"></script>
   <style>
     body {
       font-family: 'VT323', serif;
       font-size: 30px;
     }
-    .Logo{
+
+    .Logo {
       position: relative;
-      top:0;
-      left:50;
+      top: 0;
+      left: 50;
     }
+
     .Window {
-      position:absolute;
+      position: absolute;
       top: 200;
-      left:410;
-      vertical-align:middle;
+      left: 410;
+      vertical-align: middle;
       z-index: -1;
     }
   </style>
@@ -25,28 +28,36 @@
 
 <body>
   <div class="wrapper">
-    <img class= "Logo" src= "/static/Logo.svg" alt= "Logo">
+    <img class="Logo" src="/static/Logo.svg" alt="Logo">
     <img class="Window" src="/static/Window.svg" alt="Window">
-    <div class="form-group1">
-      <label for="Username" class="form-label">Username:</label>
-      <input type="text" class="form-input">
-    </div>
-    <div class="form-group2">
-      <label for="Email" class="form-label">Email:</label>
-      <input type="text" class="form-input">
-    </div>
-    <div class="btn-primary">
-      <button class="s-button">Submit</button>
-    </div>
+    <form>
+      <div class="form-group1">
+        <label for="username" class="form-label">Username:</label>
+        <input type="text" id="username" class="form-input">
+      </div>
+      <div class="form-group2">
+        <label for="email" class="form-label">Email:</label>
+        <input type="text" id="email" class="form-input">
+      </div>
+      <br />
+      <div class="btn-primary">
+
+        <button type="submit" class="s-button" onclick="createAccount(event)">Play!</button>
+      </div>
+    </form>
   </div>
 
 </body>
+
 <body>
   <div class="Folder">
     <img class="Folder1" src="/static/Vector.svg" alt="Folder1">
   </div>
   <div class="Folder2">
-    <img class="Folder2" src="/static/Folder 2 1.svg" alt="Folder2">
+    <a href="/learn">
+      <img class="Folder2" src="/static/Folder 2 1.svg" alt="Folder2">
+    </a>
   </div>
 </body>
+
 </html>

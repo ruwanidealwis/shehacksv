@@ -65,12 +65,12 @@ def login( ):
 	        return(str(e))
     if request.method == 'GET':
 
-        return "Soon to be login page..."
+        return render_template("Index.html")
 
 @app.route("/game",methods=['GET'])
 def game():
-    print(request.args.get('id', ''))
-    return "soon to be game page"
+   
+    return render_template("game.html")
 
 @app.route("/buy", methods = ["POST"])
 def buy_currency():
@@ -94,7 +94,7 @@ def buy_currency():
     cryptoWallet = Wallet.query.filter_by(userID=user, currencyType=currency_type).first()
     cryptoWallet.amount += float(crypto_gain)
     db.session.commit()
-    return "hi"
+    return "bought"
 
 @app.route("/sell", methods = ["POST"])
 def sell_cryptocurrency():
@@ -120,10 +120,23 @@ def sell_cryptocurrency():
     db.session.commit()
     return "sold"
 
+@app.route("/currentRate", methods = ["GET"])
+def get_current_rate():
+    coin = request.args.get("currency_type")
+    if coin == "beeCoin":
+        coin = "BTC"
+    else:
+        coin = "ETH"
+    r = requests.get("https://api.nomics.com/v1/exchange-rates?key={api_key}".format(api_key=os.environ['API_KEY']))
+    currencyList = r.json()
+    requiredCurrency = [currency for  currency in currencyList if currency['currency']==coin]
+    print(requiredCurrency)
+    return requiredCurrency[0]["rate"]
+
 @app.route("/history", methods = ["GET"])
-def get_coinHistory():
+def get_coin_history():
     coin = request.args.get("coin")
-    if coin == "BeeCoin":
+    if coin == "beeCoin":
         coin = "BTC"
     else:
         coin = "ETH"
@@ -159,7 +172,9 @@ def viewTransactions():
 
     return jsonify(transactionList)
 
-
+@app.route("/learn", methods = ["GET"])
+def load_education():
+    return render_template("education.html")
 
 
 
