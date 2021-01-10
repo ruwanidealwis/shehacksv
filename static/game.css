@@ -77,8 +77,6 @@ body {
   height: 50px;
   left: 215px;
   top: 542px;
-
-<<<<<<< Updated upstream
   font-family: VT323;
   font-style: normal;
   font-weight: normal;
@@ -284,27 +282,18 @@ body {
   letter-spacing: 0;
   line-height: undefined;
 }
-=======
-    font-family: VT323;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 50px;
-    color: #000000;
-}
 
-.portfolio{
-    position: absolute;
-    width: 576px;
-    height: 122px;
-    left: 800px;
-    top: 200px;
+.portfolio {
+  position: absolute;
+  width: 576px;
+  height: 122px;
+  left: 800px;
+  top: 200px;
 
-    font-family: VT323;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 64px;
-    line-height: 64px;
-    color: #000000;
+  font-family: VT323;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 64px;
+  color: #000000;
 }
->>>>>>> Stashed changes
