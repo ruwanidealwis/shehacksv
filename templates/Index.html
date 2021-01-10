@@ -6,23 +6,22 @@
   <script type="text/javascript" src="../static/js/index.js"></script>
   <style>
     body {
-      position: absolute;
-      top: 200;
-      left: 200;
+      position: fixed;
       font-family: 'VT323', serif;
       font-size: 30px;
       text-align: center;
+      left:535;
     }
 
     .Logo {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 410;
 
     }
 
     .Window {
-      position: absolute;
+      position: fixed;
       top: 200;
       left: 410;
       vertical-align: middle;
@@ -30,8 +29,29 @@
     }
 
     .btn-primary {
-      position: absolute;
-      top: 500;
+      position: fixed;
+      top: 375;
+      left:675;
+    }
+    .vector{
+      position:fixed;
+      top:500;
+      left:150;
+    }
+    .folder2 {
+      position:fixed;
+      top:525;
+      left:1050;
+    }
+    .learn {
+      position:fixed;
+      top:700;
+      left:155;
+    }
+    .game{
+      position:fixed;
+      top:700;
+      left:1070;
     }
   </style>
 </head>
@@ -51,7 +71,6 @@
       </div>
       <br />
       <div class="btn-primary">
-
         <button type="submit" class="s-button" onclick="createAccount(event)">Play!</button>
       </div>
     </form>
@@ -60,13 +79,21 @@
 </body>
 
 <body>
-  <div class="Folder">
-    <img class="Folder1" src="/static/Vector.svg" alt="Folder1">
+  <div class="vector">
+    <a href="education.html">
+      <img class="game-folder" img src= "/static/vector.svg"> </a>
   </div>
-  <div class="Folder2">
-    <a href="/learn">
-      <img class="Folder2" src="/static/Folder 2 1.svg" alt="Folder2">
-    </a>
+  <div></div>
+  <div class="folder2">
+    <a href="game.html">
+      <img class="game-folder" img src = "/static/Folder 2 1.svg">
+      </a>
+  </div>
+<div class= "Learn">
+<label for="Learn about crypto" class= "form-label"> Learn about Crypto</label>
+</div>
+<div class= "Game">
+  <label for="Game/Simulation" class= "form-label"> Game/Simulation </label>
   </div>
 </body>
 
