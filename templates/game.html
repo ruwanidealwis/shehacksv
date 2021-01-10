@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body style="background-color:rgba(245, 240, 226, 1)">
 
     <h1>
         <img id="logo" src="/static/Logo.svg" alt="logo">
@@ -24,20 +24,20 @@
     <div class="currencies">
         <div class="beecoin">
             <img class="BCN_image" src="/static/pixil-frame-0 1.svg" alt="bee logo">
-            <div onClick="beecoinOnClick(event)">
+            <button class="coinButton" onClick="beecoinOnClick(event)">
                 <div class="BCN_text">BCN</div>
-                <div class="beecoin_text" id="beecoin_price">BeeCoin .......... $</div>
-            </div>
+                <div class="beecoin_text" id="beecoin_price">BeeCoin ........$</div>
+            </button>
             <div></div>
         </div>
         <div class="a.corn">
             <img class="ACR_image" src="/static/Acorn.svg" alt="acorn logo">
-            <div onClick="acornOnClick(event)">
+            <button class="coinButton" onClick="acornOnClick(event)">
                 <div class="ACR_text">ACR</div>
-                <div class="acorn_text" id="acorn_price">A.corn........$</div>
-            </div>
+                <div class="acorn_text" id="acorn_price">A.corn<br>........$</div>
 
-            <div class="portfolio">Portfolio Value Graph</div>
+            </button>
+
 
 
         </div>
@@ -57,15 +57,19 @@
                 </div>
             </div>
         </div>
-        <div>
-            <img src="/static/Sprout.svg" alt="tree sprout">
-            <img src="/static/Small Tree.svg" alt="small tree">
-            <img src="/static/Med Tree.svg" alt="medium tree">
+        <div class="forrest">
+
             <img src="/static/Lemon treelemon tree.svg" alt="large tree">
+
+            <img src="/static/Med Tree.svg" alt="medium tree">
+
+            <img src="/static/Small Tree.svg" alt="small tree">
+
+            <img src="/static/Sprout.svg" alt="sprout">
         </div>
         <div class="container" id="popup">
             <div class="row">
-                <div class="BCH-Title">
+                <div id="BCH-Title" class="BCH-Title">
                     BeeCoin
                 </div>
             </div>
@@ -78,23 +82,37 @@
                 </div>
             </div>
             <div class="row">
-                <div id="current-price" class="current-price">
-                    <p>Current Price:</p>
+                <div class="current-price">
+                    <p>Current Price for 1 Unit:</p>
+                    <div id="current-price"></div>
                 </div>
             </div>
             <div class="row">
                 <div class="average-price">
                     <p>Your Average Price:</p>
+                    <div id="average-price"></div>
                 </div>
             </div>
+            <br />
+            <br />
             <div class="row">
                 <div class="col-sm">
-                    <button class="buy-button">
+                    <div>
+                        <label for="amount" class="formText">Amount (in USD) to Buy:</label>
+                        <br />
+                        <input type="number" id="amount" class="form-input">
+                    </div>
+                    <button class="buy-button" onclick="onBuy(event)">
                         BUY
                     </button>
                 </div>
                 <div class="col-sm">
-                    <button class="sell-button">
+                    <div>
+                        <label for="sell_amount" class="formText">Amount (of Cryptocurrency) to Sell:</label>
+                        <br />
+                        <input type="number" id="sell_amount" class="form-input">
+                    </div>
+                    <button class="sell-button" onclick="onSell(event)">
                         SELL
                     </button>
                 </div>

@@ -14,8 +14,8 @@ body {
   position: absolute;
   width: 322px;
   height: 295px;
-  left: calc(50% - 322px / 2 - 627.5px);
-  top: calc(50% - 295px / 2 - 157px);
+  left: 10px;
+  top: 30px;
 }
 
 .BCN_text {
@@ -296,4 +296,10 @@ body {
   font-size: 64px;
   line-height: 64px;
   color: #000000;
+}
+
+.wallet{
+  position:absolute;
+  left: 839px;
+  top: 396px;
 }
