@@ -22,8 +22,8 @@ body{
     position: absolute;
     width: 116px;
     height: 96px;
-    left: 214px;
-    top: 235px;
+    left: 208px;
+    top: 50px;
 
     font-family: VT323;
     font-style: normal;
@@ -37,8 +37,46 @@ body{
     position: absolute;
     width: 141px;
     height: 50px;
-    left: 206px;
-    top: 312px;
+    left: 210px;
+    top: 127px;
+
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.ACR_image{
+    position: absolute;
+    width: 83px;
+    height: 144px;
+    left: 80px;
+    top: 456px;
+}
+
+.ACR_text{
+    position: absolute;
+    width: 116px;
+    height: 96px;
+    left: 210px;
+    top: 465px;
+
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 96px;
+    color: #000000;
+}
+
+.acorn_text{
+    position: absolute;
+    width: 121px;
+    height: 50px;
+    left: 215px;
+    top: 542px;
 
     font-family: VT323;
     font-style: normal;
