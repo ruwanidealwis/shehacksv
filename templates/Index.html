@@ -8,8 +8,16 @@
       font-family: 'VT323', serif;
       font-size: 30px;
     }
-    img {
-      position: absolute;
+    .Logo{
+      position: relative;
+      top:0;
+      left:50;
+    }
+    .Window {
+      position:absolute;
+      top: 200;
+      left:410;
+      vertical-align:middle;
       z-index: -1;
     }
   </style>
@@ -17,13 +25,14 @@
 
 <body>
   <div class="wrapper">
+    <img class= "Logo" src= "/static/Logo.svg" alt= "Logo">
     <img class="Window" src="/static/Window.svg" alt="Window">
     <div class="form-group1">
-      <label for="Username" class="form-label">Username</label>
+      <label for="Username" class="form-label">Username:</label>
       <input type="text" class="form-input">
     </div>
     <div class="form-group2">
-      <label for="Email" class="form-label">Email</label>
+      <label for="Email" class="form-label">Email:</label>
       <input type="text" class="form-input">
     </div>
     <div class="btn-primary">
@@ -32,5 +41,12 @@
   </div>
 
 </body>
-
+<body>
+  <div class="Folder">
+    <img class="Folder1" src="/static/Vector.svg" alt="Folder1">
+  </div>
+  <div class="Folder2">
+    <img class="Folder2" src="/static/Folder 2 1.svg" alt="Folder2">
+  </div>
+</body>
 </html>

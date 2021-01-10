@@ -1,0 +1,123 @@
+ .crypto {
+position: absolute;
+width: 486px;
+height: 85px;
+left: 550px;
+top: 170px;
+}
+.risk {
+position: absolute;
+width: 483.61px;
+height: 91.46px;
+left: 50px;
+top: 400px;   
+}
+.differences {
+position: absolute;
+width: 435px;
+height: 75.63px;
+left: 520px;
+top: 395px;
+}
+.benefits {
+position: absolute;
+width: 554px;
+height: 102.46px;
+left: 925px;
+top: 400px;
+}
+.text1 {
+position: absolute;
+width: 723px;
+height: 129px;
+left: 447px;
+top: 245px;
+
+font-family: VT323;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+text-align: center;
+
+color: #F05050;
+
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.market {
+position: absolute;
+width: 496px;
+height: 92px;
+left: 43px;
+top: 518px;
+
+font-family: VT323;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 20px;
+text-align: center;
+
+color: #000000;
+}
+
+.comp {
+position: absolute;
+width: 488.8px;
+height: 148.01px;
+left: 43px;
+top: 610px;
+
+font-family: VT323;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 20px;
+text-align: center;
+
+color: #000000;
+}
+
+.cyber {
+position: absolute;
+width: 458.69px;
+height: 106.67px;
+left: 64.1px;
+top: 714.33px;
+
+font-family: VT323;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 20px;
+text-align: center;
+
+color: #000000;
+}
+
+.btceth {
+position: absolute;
+width: 361px;
+height: 30px;
+left: 550px;
+top: 559px;
+    
+font-family: VT323;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 30px;
+   
+text-align: center;
+    
+color: #000000;    
+}
+
+.btc {
+position: absolute;
+width: 50px;
+height: 50px;
+left: 575px;
+top: 640px;
+}
