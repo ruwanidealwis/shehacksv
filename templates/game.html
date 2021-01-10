@@ -21,52 +21,52 @@
     <h1>
         <img id="logo" src="/static/Logo.svg" alt="logo">
     </h1>
-    <div class="currencies">
-        <div class="beecoin">
-            <img class="BCN_image" src="/static/pixil-frame-0 1.svg" alt="bee logo">
-            <button class="coinButton" onClick="beecoinOnClick(event)">
-                <div class="BCN_text">BCN</div>
-                <div class="beecoin_text" id="beecoin_price">BeeCoin ........$</div>
-            </button>
-            <div></div>
-        </div>
-        <div class="a.corn">
-            <img class="ACR_image" src="/static/Acorn.svg" alt="acorn logo">
-            <button class="coinButton" onClick="acornOnClick(event)">
-                <div class="ACR_text">ACR</div>
-                <div class="acorn_text" id="acorn_price">A.corn<br>........$</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <div class="currencies">
+                    <div class="row">
+                        <div class="beecoin">
+                            <img class="BCN_image" src="/static/pixil-frame-0 1.svg" alt="bee logo">
+                            <button class="coinButton" onClick="beecoinOnClick(event)">
+                                <div class="BCN_text">BCN</div>
+                                <div class="beecoin_text" id="beecoin_price">BeeCoin ........$</div>
+                            </button>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="acorn">
+                            <img class="ACR_image" src="/static/Acorn.svg" alt="acorn logo">
+                            <button class="coinButton" onClick="acornOnClick(event)">
+                                <div class="ACR_text">ACR</div>
+                                <div class="acorn_text" id="acorn_price">A.corn<br>........$</div>
 
-            </button>
-
-
-
-        </div>
-        <div class="wallet">
-            <div id="e30_455">
-                <div id="e30_439">
-                    <div id="e30_435"></div><span id="BCHTEXT">BCH Value:</span>
-                    <div id="e30_436"></div>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div id="e30_445">
-                    <div id="e30_446"></div><span id="ACRTEXT">ACR Value:</span>
-                    <div id="e30_448"></div>
-                </div>
-                <div id="e30_450">
-                    <div id="e30_451"></div><span id="USDTEXT">USD Balance:</span>
-                    <div id="e30_453"></div>
+            </div>
+            <div class="col-md">
+                <div class="wallet">
+                    <div id="e30_455">
+                        <div id="e30_439">
+                            <div id="e30_435"><span id="BCHTEXT">BCH Value:</span></div>
+                            <div id="e30_436"></div>
+                        </div>
+                        <div id="e30_445">
+                            <div id="e30_446"><span id="ACRTEXT">ACR Value:</span></div>
+                            <div id="e30_448"></div>
+                        </div>
+                        <div id="e30_450">
+                            <div id="e30_451"><span id="USDTEXT">USD Balance:</span></div>
+                            <div id="e30_453"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="forrest">
 
-            <img src="/static/Lemon treelemon tree.svg" alt="large tree">
-
-            <img src="/static/Med Tree.svg" alt="medium tree">
-
-            <img src="/static/Small Tree.svg" alt="small tree">
-
-            <img src="/static/Sprout.svg" alt="sprout">
-        </div>
         <div class="container" id="popup">
             <div class="row">
                 <div id="BCH-Title" class="BCH-Title">
