@@ -28,21 +28,21 @@
   }
 
   .form-group1{
-      padding-left: 60;
-      padding-top: 100;
-      margin:0 auto;
+      padding-left: 0;
+      padding-top: 250 ;
+      margin:0;
   }
 
   .form-group2{
-      padding-left: 80;
+      padding-left: 37;
       padding-top: 20px;
-      margin: 0 auto;
+      margin: 0;
   }
 
   .btn-primary{
     background:var(--clr-green);;
      padding: 0;
-      margin-top:15;
+      margin-top:150;
       margin: 0 auto;
       width: 100px;
       cursor:pointer;
@@ -53,7 +53,7 @@
     background:var(--clr-green);
     border: 0;  
     outline:0;
-    padding: 40 auto;
+    padding: 30 auto;
     font-family:'VT323',serif;
       font-weight:bold;
       font-size: 25;
