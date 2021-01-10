@@ -6,8 +6,9 @@
     --padding: 1rem;
   }
   
-  *,
-  *::before,
+  body{
+      background-color: #F5F0E2;
+  }
   *::after {
     box-sizing: border-box;
     margin: 0;
@@ -27,21 +28,21 @@
   }
 
   .form-group1{
-      padding-left: 20px;
-      padding-top: 40px;
+      padding-left: 60;
+      padding-top: 100;
       margin:0 auto;
   }
 
   .form-group2{
-      padding-left: 20px;
+      padding-left: 80;
       padding-top: 20px;
       margin: 0 auto;
   }
 
   .btn-primary{
     background:var(--clr-green);;
-     padding: var(--padding);
-      margin-top:10px;
+     padding: 0;
+      margin-top:15;
       margin: 0 auto;
       width: 100px;
       cursor:pointer;
@@ -52,10 +53,10 @@
     background:var(--clr-green);
     border: 0;  
     outline:0;
-    padding: 15% auto;
+    padding: 40 auto;
     font-family:'VT323',serif;
       font-weight:bold;
-      font-size: 14px;
+      font-size: 25;
       text-align: center;
       display:block;
       margin:0 auto;
