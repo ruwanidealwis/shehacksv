@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       USDText.appendChild(document.createTextNode(jsonData[0]["amount"]));
     });
 
-  await fetch(`/viewWallet?userID=${params.get("id")}`, {
+  await fetch(`/currentRate?currency_type=beeCoin`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -40,6 +40,27 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         return response.json();
       }
     })
-    .then((jsonData) => {});
+    .then((jsonData) => {
+      console.log(jsonData);
+      beecoinPrice = document.getElementById("beecoin_price");
+      beecoinPrice.appendChild(document.createTextNode(jsonData));
+    });
+
+  await fetch(`/currentRate?currency_type=aCorn`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .then((jsonData) => {
+      console.log(jsonData);
+      acornPrice = document.getElementById("acorn_price");
+      acornPrice.appendChild(document.createTextNode(jsonData));
+    });
   //get currenct prices
 });

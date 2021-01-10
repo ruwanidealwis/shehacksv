@@ -77,7 +77,6 @@ body {
   height: 50px;
   left: 215px;
   top: 542px;
-
   font-family: VT323;
   font-style: normal;
   font-weight: normal;
@@ -282,4 +281,19 @@ body {
   font-size: 30px;
   letter-spacing: 0;
   line-height: undefined;
+}
+
+.portfolio {
+  position: absolute;
+  width: 576px;
+  height: 122px;
+  left: 800px;
+  top: 200px;
+
+  font-family: VT323;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 64px;
+  color: #000000;
 }
