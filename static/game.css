@@ -34,6 +34,7 @@ body {
 }
 
 .beecoin_text {
+  padding-left: 2%;
   position: absolute;
   width: 141px;
   height: 50px;
@@ -268,6 +269,12 @@ body {
   left: 7.668777942657471px;
   top: 14.849346160888672px;
 }
+.formText {
+  font-family: VT323;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+}
 #e30_454 {
   color: rgba(217.0000022649765, 209.00000274181366, 186.0000041127205, 1);
   opacity: 1;
@@ -298,8 +305,11 @@ body {
   color: #000000;
 }
 
-.wallet{
-  position:absolute;
+.wallet {
+  position: absolute;
   left: 839px;
   top: 396px;
+}
+.coinButton {
+  border: none;
 }

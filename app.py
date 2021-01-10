@@ -24,6 +24,11 @@ def login( ):
         content = request.json
         name = content['username']
         email = content['email']
+        user = User.query.filter_by(name=name).first()
+
+        if user:
+            return str(user.id)
+    
         try:
             user=User(
                 name=name,
@@ -40,7 +45,7 @@ def login( ):
             # we create 3 wallets for the user 
             cadWallet=Wallet(
                 userID=user.id,
-                currencyType='CAD',
+                currencyType='USD',
                 amount = 50
             )
             beeWallet=Wallet(
@@ -69,17 +74,17 @@ def login( ):
 
 @app.route("/game",methods=['GET'])
 def game():
-   
     return render_template("game.html")
 
 @app.route("/buy", methods = ["POST"])
 def buy_currency():
+    print(request.form)
     user = request.form['userID']
     currency_type = request.form['currency_type']
     cost = request.form['cost']
     rate = request.form['current_rate']
     crypto_gain = 1/float(rate)*float(cost)
-
+    print(crypto_gain)
     transaction=Transaction(
             userID= user,
             transactionType="buy",
@@ -90,7 +95,7 @@ def buy_currency():
     db.session.add(transaction)
     db.session.commit()
 
-    cadWallet = Wallet.query.filter_by(userID=user, currencyType="CAD").first()
+    cadWallet = Wallet.query.filter_by(userID=user, currencyType="USD").first()
     cadWallet.amount -=  float(cost)
     cryptoWallet = Wallet.query.filter_by(userID=user, currencyType=currency_type).first()
     cryptoWallet.amount += float(crypto_gain)
@@ -104,17 +109,18 @@ def sell_cryptocurrency():
     amount_to_sell = request.form['sell_amount']
     rate = request.form['current_rate']
     money_gain = float(rate)*float(amount_to_sell)
+    print(amount_to_sell)
     transaction=Transaction(
             userID= user,
             transactionType="sell",
             currencyType=currency_type,
-            netCryptoChange = amount_to_sell*-1,
+            netCryptoChange = float(amount_to_sell)*-1,
             netChange=money_gain
     )
     db.session.add(transaction)
     db.session.commit()
 
-    cadWallet = Wallet.query.filter_by(userID=user, currencyType="CAD").first()
+    cadWallet = Wallet.query.filter_by(userID=user, currencyType="USD").first()
     cadWallet.amount +=  float(money_gain)
    
     cryptoWallet = Wallet.query.filter_by(userID=user, currencyType=currency_type).first()
@@ -182,16 +188,17 @@ def load_education():
 def average_price():
     user = request.args.get("userID")
     currency = request.args.get("currency_type")
-    bought_shares = Transaction.query.filter_by(userID = user, currencyType=currency_type, transactionType="buy")
+    bought_shares = Transaction.query.filter_by(userID = user, currencyType=currency, transactionType="buy")
     total_sum = 0
-    if len(bought_shares)==0:
-        return 0
-
+    count = 0
     for share in bought_shares:
+        count +=1
         share = share.serialize()
-        total_sum += share.netCryptoChange*share.netChange
-    
-    total_sum = total_sum/len(bought_shares)
+        print(share)
+        total_sum += share["netCryptoChange"]*share["netChange"]*-1
+    if total_sum==0:
+        return str(0)
+    total_sum = total_sum/count
 
     return jsonify({ "average_price":total_sum})
        

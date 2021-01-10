@@ -9,7 +9,7 @@ class Transaction(db.Model):
     currencyType = db.Column(db.String())
     netChange = db.Column(db.Float)
     netCryptoChange = db.Column(db.Float)
-    def __init__(self,userID,currencyType,transactionType,netChange,amount=0):
+    def __init__(self,userID,currencyType,transactionType,netChange,netCryptoChange,amount=0):
         self.userID = userID
         self.currencyType = currencyType
         self.transactionType = transactionType
