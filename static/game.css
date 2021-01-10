@@ -297,3 +297,9 @@ body {
   line-height: 64px;
   color: #000000;
 }
+
+.wallet{
+  position:absolute;
+  left: 839px;
+  top: 396px;
+}

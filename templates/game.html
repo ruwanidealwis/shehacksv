@@ -44,11 +44,15 @@
                 </div>
             </div>
         </div>
-        <div>
-            <img src="/static/Sprout.svg" alt="tree sprout">
-            <img src="/static/Small Tree.svg" alt="small tree">
+        <div class="forrest">
+            {% if growth == 100 %}
+                <img src="/static/Lemon treelemon tree.svg" alt="large tree">
+            {% elseif growth >= 75 %}
             <img src="/static/Med Tree.svg" alt="medium tree">
-            <img src="/static/Lemon treelemon tree.svg" alt="large tree">
+            {% elseif growth >= 50%}
+            <img src="/static/Small Tree.svg" alt="small tree">
+            {% else %}
+            <img src="/static/Sprout.svg" alt="sprout">
         </div>
 </body>
 
