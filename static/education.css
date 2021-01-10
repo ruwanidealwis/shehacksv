@@ -1,123 +1,388 @@
- .crypto {
-position: absolute;
-width: 486px;
-height: 85px;
-left: 550px;
-top: 170px;
-}
-.risk {
-position: absolute;
-width: 483.61px;
-height: 91.46px;
-left: 50px;
-top: 400px;   
-}
-.differences {
-position: absolute;
-width: 435px;
-height: 75.63px;
-left: 520px;
-top: 395px;
-}
-.benefits {
-position: absolute;
-width: 554px;
-height: 102.46px;
-left: 925px;
-top: 400px;
-}
-.text1 {
-position: absolute;
-width: 723px;
-height: 129px;
-left: 447px;
-top: 245px;
-
-font-family: VT323;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 30px;
-text-align: center;
-
-color: #F05050;
-
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.market {
-position: absolute;
-width: 496px;
-height: 92px;
-left: 43px;
-top: 518px;
-
-font-family: VT323;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 20px;
-text-align: center;
-
-color: #000000;
-}
-
-.comp {
-position: absolute;
-width: 488.8px;
-height: 148.01px;
-left: 43px;
-top: 610px;
-
-font-family: VT323;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 20px;
-text-align: center;
-
-color: #000000;
-}
-
-.cyber {
-position: absolute;
-width: 458.69px;
-height: 106.67px;
-left: 64.1px;
-top: 714.33px;
-
-font-family: VT323;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 20px;
-text-align: center;
-
-color: #000000;
-}
-
-.btceth {
-position: absolute;
-width: 361px;
-height: 30px;
-left: 550px;
-top: 559px;
+.crypto {
+    position: absolute;
+    width: 486px;
+    height: 85px;
+    left: 480px;
+    top: 170px;
+    }
+    .risk {
+    position: absolute;
+    width: 483.61px;
+    height: 91.46px;
+    left: 50px;
+    top: 400px;   
+    }
+    .differences {
+    position: absolute;
+    width: 435px;
+    height: 75.63px;
+    left: 520px;
+    top: 395px;
+    }
+    .benefits {
+    position: absolute;
+    width: 554px;
+    height: 102.46px;
+    left: 925px;
+    top: 400px;
+    }
+    .text1 {
+    position: absolute;
+    width: 723px;
+    height: 129px;
+    left: 400px;
+    top: 245px;
     
-font-family: VT323;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 30px;
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    
+    color: #F05050;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    .market {
+    position: absolute;
+    width: 496px;
+    height: 92px;
+    left: 43px;
+    top: 518px;
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    
+    color: #000000;
+    }
+    
+    .market-heading {
+    position: absolute;
+    width: 188px;
+    height: 34px; 
+    left: 200px;
+    top: 480px;
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #038C4C;
+    }
+    
+    .comp {
+    position: absolute;
+    width: 488.8px;
+    height: 148.01px;
+    left: 43px;
+    top: 640px;
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    
+    color: #000000;
+    }
+    
+    .comp-heading {
+    position: absolute; 
+    width: 188px;
+    height: 34px; 
+    left: 200px;
+    top: 600px;
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #038C4C;
+    }
+    
+    .cyber {
+    position: absolute;
+    width: 458.69px;
+    height: 106.67px;
+    left: 64.1px;
+    top: 750.33px;
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    
+    color: #000000;
+    }
+    
+    .cyber-heading {
+        position: absolute; 
+        width: 188px;
+        height: 34px; 
+        left: 200px;
+        top: 710px;    
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #038C4C;
+    
+    }
+    
+    .read {
+        position: absolute; 
+        width: 188px;
+        height: 34px; 
+        left: 200px;
+        top: 850px;    
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #038C4C;
+    }
+    
+    .btceth {
+    position: absolute;
+    width: 361px;
+    height: 30px;
+    left: 565px;
+    top: 509px;
+        
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+       
+    text-align: center;
+        
+    color: #000000;    
+    }
+    
+    .btc {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 605px;
+    top: 590px;
+    }
+    
+    .eth {
+    position: absolute;
+     width: 50px;
+    height: 50px;
+    left: 780px;
+    top: 590px; 
+    }
+    
+    .bnbltc {
+        position: absolute;
+        width: 421px;
+        height: 30px;
+        left: 535px;
+        top: 625px;
+            
+        font-family: VT323;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 30px;
+           
+        text-align: center;
+            
+        color: #000000;    
+    
+    }
+    .bnb {
+    position: absolute;
+    width: 53px;
+    height: 50px;
+    left: 605px;
+    top: 700px;   
+    }
+    
+    .ltc { 
+    position: absolute;
+    width: 50px;
+    height: 50.83px;
+    left: 780px;
+    top: 700px;
+    }
+    
+    .anon {
+        position: absolute;
+        width: 445px;
+        height: 56px;
+        left: 970px;
+        top: 518px;
+        
+        font-family: VT323;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        
+        color: #000000;  
+    }
+    
+    .anon-heading {
+    position: absolute;
+    width: 188px;
+    height: 34px;
+    left: 1100px;
+    top: 480px;
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #038C4C; 
+    }
+    
+    .access {
+        position: absolute;
+        width: 445px;
+        height: 56px;
+        left: 970px;
+        top: 640px;
+        
+        font-family: VT323;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        
+        color: #000000;    
+    }
+    
+    .access-heading {
+    position: absolute;
+    width: 188px;
+    height: 34px;
+    left: 1100px;
+    top: 600px;
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #038C4C; 
+    }
+    
+    .auto {
+        position: absolute;
+        width: 445px;
+        height: 56px;
+        left: 970px;
+        top: 750.33px;
+        
+        font-family: VT323;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        
+        color: #000000;  
+    }
+    
+    .auto-heading {
+    position: absolute;
+    width: 188px;
+    height: 34px;
+    left: 1100px;
+    top: 710px;
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #038C4C;
+    }
+    
+    .read2 {
+        position: absolute; 
+        width: 188px;
+        height: 34px; 
+        left: 1100px;
+        top: 850px;    
+    
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #038C4C;  
+    }
+
+    .game-folder {
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 221px;
+    height: 129px;
+    left: 1200px;
+    top: 40px;
+
    
-text-align: center;
-    
-color: #000000;    
-}
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
 
-.btc {
-position: absolute;
-width: 50px;
-height: 50px;
-left: 575px;
-top: 640px;
-}
+    .play-game {
+        position: absolute;
+        width: 188px;
+        height: 34px;
+        left: 1210px;
+        top: 150px;
+
+        font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #000000;  
+    }
+    
