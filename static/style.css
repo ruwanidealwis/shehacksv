@@ -32,7 +32,7 @@
 
   .form-group1{
       padding-right: 100;
-      padding-top: 225 ;
+      padding-top: 325 ;
       text-align:left;
   }
 
@@ -45,7 +45,7 @@
   .btn-primary{
     background:var(--clr-green);;
      padding: 0;
-      margin-top:300;
+      margin-top:375;
       margin: 0 auto;
       width: 100px;
       cursor:pointer;
