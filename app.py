@@ -140,12 +140,12 @@ def get_coin_history():
         coin = "BTC"
     else:
         coin = "ETH"
-    today = datetime.date.today()
+    today = str(datetime.date.today())+ "T00%3A00%3A00Z"
     #should trends from two weeks ago ...
-    start = str(today - (datetime.timedelta(days=14))) + "T00%3A00%3A00Z"
-    end = str(today - datetime.timedelta(days=13)) + "T00%3A00%3A00Z"
-    print("https://api.nomics.com/v1/exchange-rates/history?currency={currency}&start={start}&end={end}&key={api_key}".format(currency=coin,start=start,end=end,api_key=os.environ['API_KEY']))
-    r = requests.get("https://api.nomics.com/v1/exchange-rates/history?currency={currency}&start={start}&end={end}&key={api_key}".format(currency=coin,start=start,end=end,api_key=os.environ['API_KEY']))
+  
+   
+
+    r = requests.get("https://api.nomics.com/v1/exchange-rates/history?currency={currency}&start={start}&key={api_key}".format(currency=coin,start=today,api_key=os.environ['API_KEY']))
    
  
     return jsonify(r.json())
