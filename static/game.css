@@ -1,0 +1,8 @@
+body{
+    font-family:'VT323', serif;
+    color:var(--clr-black);
+}
+
+.beecoin{
+    margin-top: 20px;
+}
