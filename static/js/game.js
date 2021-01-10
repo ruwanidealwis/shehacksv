@@ -1,3 +1,5 @@
+let currentBeeCoinPrice = 0;
+let currentaCornPrice = 0;
 document.addEventListener("DOMContentLoaded", async (event) => {
   console.log(window.location.href);
 
@@ -44,6 +46,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       console.log(jsonData);
       beecoinPrice = document.getElementById("beecoin_price");
       beecoinPrice.appendChild(document.createTextNode(jsonData));
+      currentBeeCoinPrice = jsonData;
     });
 
   await fetch(`/currentRate?currency_type=aCorn`, {
@@ -61,6 +64,103 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       console.log(jsonData);
       acornPrice = document.getElementById("acorn_price");
       acornPrice.appendChild(document.createTextNode(jsonData));
+      currentaCornPrice = jsonData;
     });
   //get currenct prices
 });
+
+beecoinOnClick = async (event) => {
+  console.log(event);
+  console.log(document.getElementById("popup"));
+  document.getElementById("popup").style.display = "block";
+  beecoinPrice = document.getElementById("current-price");
+  beecoinPrice.appendChild(document.createTextNode(currentBeeCoinPrice));
+  var ctx = document.getElementById("myChart").getContext("2d");
+
+  await fetch(`/history?coin=beeCoin`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .then((jsonData) => {
+      console.log(jsonData);
+      labels = [];
+      data = [];
+      for (const rateData of jsonData) {
+        labels.push(rateData["timestamp"]);
+        data.push(rateData["rate"]);
+      }
+      console.log(data);
+      console.log(labels);
+      var myLineChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: "beeCoin",
+              fill: false,
+              backgroundColor: "ffffff",
+              borderColor: "000000",
+              data: data,
+            },
+          ],
+        },
+      });
+    });
+  document.getElementById("popup").scrollIntoView();
+};
+
+acornOnClick = async (event) => {
+  console.log(event);
+  console.log(document.getElementById("popup"));
+  document.getElementById("popup").style.display = "block";
+  acornPrice = document.getElementById("current-price");
+  acornPrice.appendChild(document.createTextNode(currentaCornPrice));
+  var ctx = document.getElementById("myChart").getContext("2d");
+
+  await fetch(`/history?coin=aCorn`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .then((jsonData) => {
+      console.log(jsonData);
+      labels = [];
+      data = [];
+      for (const rateData of jsonData) {
+        labels.push(rateData["timestamp"]);
+        data.push(rateData["rate"]);
+      }
+      console.log(data);
+      console.log(labels);
+      var myLineChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: labels,
+          datasets: [
+            {
+              label: "aCorn",
+              fill: false,
+              backgroundColor: "ffffff",
+              borderColor: "000000",
+              data: data,
+            },
+          ],
+        },
+      });
+    });
+  document.getElementById("popup").scrollIntoView();
+};

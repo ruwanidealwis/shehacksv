@@ -5,24 +5,37 @@
     <title>Game/Simulation</title>
     <link rel="stylesheet" href="/static/game.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=VT323">
+    <link rel="stylesheet" href="/static/bchpopup.css">
     <script type="text/javascript" src="../static/js/game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
+
     <h1>
         <img id="logo" src="/static/Logo.svg" alt="logo">
     </h1>
     <div class="currencies">
         <div class="beecoin">
             <img class="BCN_image" src="/static/pixil-frame-0 1.svg" alt="bee logo">
-            <div class="BCN_text">BCN</div>
-            <div class="beecoin_text" id="beecoin_price">BeeCoin .......... $</div>
+            <div onClick="beecoinOnClick(event)">
+                <div class="BCN_text">BCN</div>
+                <div class="beecoin_text" id="beecoin_price">BeeCoin .......... $</div>
+            </div>
             <div></div>
         </div>
         <div class="a.corn">
             <img class="ACR_image" src="/static/Acorn.svg" alt="acorn logo">
-            <div class="ACR_text">ACR</div>
-            <div class="acorn_text" id="acorn_price">A.corn........$</div>
+            <div onClick="acornOnClick(event)">
+                <div class="ACR_text">ACR</div>
+                <div class="acorn_text" id="acorn_price">A.corn........$</div>
+            </div>
 
             <div class="portfolio">Portfolio Value Graph</div>
 
@@ -49,6 +62,46 @@
             <img src="/static/Small Tree.svg" alt="small tree">
             <img src="/static/Med Tree.svg" alt="medium tree">
             <img src="/static/Lemon treelemon tree.svg" alt="large tree">
+        </div>
+        <div class="container" id="popup">
+            <div class="row">
+                <div class="BCH-Title">
+                    BeeCoin
+                </div>
+            </div>
+            <div class="row">
+                <div class="graph">
+                    <canvas id="myChart" style="position: relative; height:60vh; width:80vw">
+
+                    </canvas>
+
+                </div>
+            </div>
+            <div class="row">
+                <div id="current-price" class="current-price">
+                    <p>Current Price:</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="average-price">
+                    <p>Your Average Price:</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <button class="buy-button">
+                        BUY
+                    </button>
+                </div>
+                <div class="col-sm">
+                    <button class="sell-button">
+                        SELL
+                    </button>
+                </div>
+            </div>
+
+
+
         </div>
 </body>
 

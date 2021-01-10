@@ -84,6 +84,7 @@ def buy_currency():
             userID= user,
             transactionType="buy",
             currencyType=currency_type,
+            netCryptoChange = crypto_gain,
             netChange=float(cost)*-1 #when you buy you lost money....
     )
     db.session.add(transaction)
@@ -107,6 +108,7 @@ def sell_cryptocurrency():
             userID= user,
             transactionType="sell",
             currencyType=currency_type,
+            netCryptoChange = amount_to_sell*-1,
             netChange=money_gain
     )
     db.session.add(transaction)
@@ -175,6 +177,30 @@ def viewTransactions():
 @app.route("/learn", methods = ["GET"])
 def load_education():
     return render_template("education.html")
+
+@app.route("/averagePrice", methods = ["GET"])
+def average_price():
+    user = request.args.get("userID")
+    currency = request.args.get("currency_type")
+    bought_shares = Transaction.query.filter_by(userID = user, currencyType=currency_type, transactionType="buy")
+    total_sum = 0
+    if len(bought_shares)==0:
+        return 0
+
+    for share in bought_shares:
+        share = share.serialize()
+        total_sum += share.netCryptoChange*share.netChange
+    
+    total_sum = total_sum/len(bought_shares)
+
+    return jsonify({ "average_price":total_sum})
+       
+
+@app.route("/averageReturn", methods = ["GET"])
+def average_return():
+
+    return render_template("education.html")
+
 
 
 

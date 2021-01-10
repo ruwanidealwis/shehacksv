@@ -8,15 +8,17 @@ class Transaction(db.Model):
     transactionType =  db.Column(db.String())  #change to ID from foreign key if there is time
     currencyType = db.Column(db.String())
     netChange = db.Column(db.Float)
+    netCryptoChange = db.Column(db.Float)
     def __init__(self,userID,currencyType,transactionType,netChange,amount=0):
         self.userID = userID
         self.currencyType = currencyType
         self.transactionType = transactionType
         self.netChange = netChange
+        self.netCryptoChange = netCryptoChange
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
-        
+
 
     def serialize(self):
         return {
@@ -24,5 +26,6 @@ class Transaction(db.Model):
             'userID': self.userID,
             'transactionType':self.transactionType,
             'currencyType':self.currencyType,
-            'netChange':self.netChange
+            'netChange':self.netChange,
+            'netCryptoChange':self.netCryptoChange
         }

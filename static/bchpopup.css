@@ -1,76 +1,67 @@
 .BCH-Title {
-    position: absolute;
-width: 261px;
-height: 50px;
-left: 600px;
-top: 85px;
+  font-family: VT323;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 50px;
+  /* identical to box height */
 
-font-family: VT323;
-font-style: normal;
-font-weight: normal;
-font-size: 50px;
-line-height: 50px;
-/* identical to box height */
+  color: #000000;
+}
 
-
-color: #000000;
+#popup {
+  display: none;
+  background-color: #f5f0e2;
+  z-index: 1;
+  width: 100vw;
+  min-height: 100vh;
+  margin-top: 10%;
+  padding: 10%;
+  text-align: center;
 }
 
 .buy-button {
-    
-position: absolute;
-width: 260px;
-height: 79px;
-left: 361px;
-top: 652px;
-
-background: #038C4C;
-border-radius: 10px;
+  margin: 10%;
+  width: 30%;
+  height: 35%;
+  font-family: VT323;
+  background: #038c4c;
+  border-radius: 10px;
+  font-size: 30px;
 }
 
 .sell-button {
-    position: absolute;
-width: 260px;
-height: 79px;
-left: 836px;
-top: 652px;
+  margin: 10%;
+  width: 30%;
+  height: 35%;
+  font-family: VT323;
+  background: #038c4c;
+  border-radius: 10px;
+  font-size: 30px;
 
-background: #F05050;
-border-radius: 10px;
+  background: #f05050;
 }
 
 .current-price {
-    position: absolute;
-width: 281px;
-height: 50px;
-left: 493px;
-top: 450px;
+  width: "50%";
 
-font-family: VT323;
-font-style: normal;
-font-weight: normal;
-font-size: 50px;
-line-height: 50px;
-/* identical to box height */
+  font-family: VT323;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 50px;
+  /* identical to box height */
 
-
-color: #000000;
+  color: #000000;
 }
 
 .average-price {
-    position: absolute;
-width: 381px;
-height: 50px;
-left: 493px;
-top: 498px;
+  font-family: VT323;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 50px;
+  /* identical to box height */
 
-font-family: VT323;
-font-style: normal;
-font-weight: normal;
-font-size: 50px;
-line-height: 50px;
-/* identical to box height */
-
-
-color: #000000;
+  color: #000000;
 }
