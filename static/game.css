@@ -5,4 +5,45 @@ body{
 
 .beecoin{
     margin-top: 20px;
+    position: relative;
+    width: 800px;
+    height: 400px;
+}
+
+.BCN_image{
+    position: absolute;
+    width: 322px;
+    height: 295px;
+    left: calc(50% - 322px/2 - 627.5px);
+    top: calc(50% - 295px/2 - 157px);
+}
+
+.BCN_text{
+    position: absolute;
+    width: 116px;
+    height: 96px;
+    left: 214px;
+    top: 235px;
+
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 96px;
+    line-height: 96px;
+    color: #000000;
+}
+
+.beecoin_text{
+    position: absolute;
+    width: 141px;
+    height: 50px;
+    left: 206px;
+    top: 312px;
+
+    font-family: VT323;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
 }
